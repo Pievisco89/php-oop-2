@@ -20,7 +20,7 @@ Gestite eventuali eccezioni che si possono verificare (es: carta di credito scad
 
 
   $customer1 = new Customer('Ugo', 'De Ughi', 'ugo@gmail.it', 50);
-  
+  $customer1->getCreditCard(12345678910, '05/20', 123);
   var_dump($customer1);
 
 

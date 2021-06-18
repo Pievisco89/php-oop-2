@@ -4,6 +4,7 @@
 
   class Customer{
 
+    use CreditCard;
     public $firstname;
     public $lastname;
     public $email;
@@ -16,6 +17,16 @@
       $this->email = $_email;
       $this->age = $_age;
   
+    }
+
+    public function getCreditCard($_number, $_validDate, $_cvv)
+    {
+      if(!is_int($_number)){
+        throw new Exception("Carta di credito non valida");
+      }
+      $this->number = $_number;
+      $this->validDate = $_validDate;
+      $this->cvv = $_cvv;
     }
   }
 
